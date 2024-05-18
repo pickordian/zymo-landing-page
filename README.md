@@ -17,12 +17,12 @@ To set up and run this project locally, follow these steps:
     cd zymo-landing-page
     ```
 3. **Open the `index.html` file in your browser**
-    You can double click on the index.html file, or 
-     You can open it using the following command:
+    You can double click on the index.html file, or  
+    You can open it using the following command:
     ```sh
     open index.html
     ```
-**Features
-Comming soon / italic
-**Demo 
+##Features
+_Comming soon..._ 
+##Demo 
  Click [here](pickordian.github.io/zymo-landing-page) to see the website demo
