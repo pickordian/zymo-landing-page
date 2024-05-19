@@ -1,4 +1,179 @@
-:root{
- --cta-color: #4a8047;
- --gray: #f1f1f1;
+:root {
+  --cta-color: #00843d;
+  --light-gray: #f8f8f8;
+  --gray: #f1f1f1;
+  --blue-gray: #ccd0d9;
+}
+body {
+  width: 100%;
+  margin: 0;
+}
+
+section {
+  padding: 2rem 4rem;
+}
+h1 {
+  margin: 0.5rem;
+  text-align: center;
+}
+h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+}
+p {
+  line-height: 1.5rem;
+}
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+}
+.cta-btn {
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  background-color: var(--cta-color);
+  font-weight: 600;
+  color: #ffffff;
+}
+.banner {
+  height: 35svh;
+  background-image: url("assets/banner-desktop.jpg");
+  /*Backrgound-size: cover causes 
+  the banner to clip some part of the bg image. Really depend on 
+  one's preference, and I prefer this way  */
+  background-size: 100% 100%;
+}
+#Hero {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero-feature-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10%;
+}
+
+.hero-feature {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.hero-feature > img {
+  width: 8rem;
+  height: auto;
+}
+
+#Text {
+  background-color: var(--gray);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+#Text div:last-of-type {
+  width: max(60%, 25rem);
+}
+#Text p {
+  display: inline-block;
+}
+#Cards {
+  background-color: var(--light-gray);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.card-container {
+  width: min(15rem, 100%);
+  position: relative;
+}
+.card {
+  display: block;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+/* class + type selectors are used here because I'm 
+not sure if they can be reused outside of this card */
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.card div {
+  padding: 1rem 1rem 1.5rem;
+}
+.card h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--cta-color);
+}
+.card p {
+  margin: 0.25rem 0 4rem;
+  line-height: 1.25rem;
+  color: #000000;
+}
+.card-link {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  padding: 0.25rem 1rem;
+  border: 0.1rem solid var(--cta-color);
+  border-radius: 1rem;
+  box-sizing: border-box;
+  font-weight: 600;
+  color: #000000;
+}
+#Contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+#Contact form {
+  width: min(40rem, 100%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+#Contact span {
+  width: min(15rem, 100%);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#Contact span:last-of-type {
+  width: 100%;
+}
+#Contact input,
+textarea {
+  padding: 0.5rem;
+  border: 1px solid var(--blue-gray);
+  border-radius: 0.5rem;
+}
+
+@media (width <= 40rem) {
+  .banner {
+    background-image: url("assets/banner-mobile.jpg");
+  }
+}
+@media (width > 40rem) and (width <= 60rem) {
+  .banner {
+    background-image: url("assets/banner-tablet.jpg");
+  }
 }

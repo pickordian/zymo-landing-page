@@ -12,12 +12,13 @@ To set up and run this project locally, follow these steps:
    ```sh
    git clone https://github.com/pickordian/zymo-landing-page.git
    ```
-2. **Navigate to project repository**
+2. **Navigate to project repository:**
     ```sh
     cd zymo-landing-page
     ```
-3. **Open the `index.html` file in your browser**
+3. **Open the `index.html` file in your browser:**
     You can double click on the index.html file, or  
+    
     You can open it using the following command:
     ```sh
     open index.html
