@@ -135,7 +135,7 @@ not sure if they can be reused outside of this card */
   line-height: 1.25rem;
   color: #000000;
 }
-.card-link {
+.card-cta {
   position: absolute;
   left: 1rem;
   bottom: 1rem;

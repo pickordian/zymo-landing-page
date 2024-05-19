@@ -1,3 +1,4 @@
+import cardJSON from "./cards.js";
 import CardJSON from "./cards.js";
 
 function handleHeroInqClick() {
@@ -9,28 +10,47 @@ function handleHeroInqClick() {
 
 function insertCards() {
   let newCards ='';
+  const cardsSection = document.getElementById('Cards');
   // extract object key: eg: 'card_1, card_2' then
   // use them to access CardJSON data 
   Object.keys(CardJSON).forEach(function (key, index) {
-    newCards +=
-    `<div class="card-container">
-        <a href=${CardJSON[key].url} class="card">
-          <img
-            src="${CardJSON[key].image_url}"
-            alt="Zymo ${CardJSON[key].title} illustration"
-          />
-          <div>
-            <h3>${CardJSON[key].title}</h3>
-            <p>
-              ${CardJSON[key].description}
-            </p>
-          </div>
-        </a>
-        <a href=${CardJSON[key].url} class="card-link">Learn more</a>
-      </div>
-        `;
+
+    const cardContainer = document.createElement("div");
+    cardContainer.classList.add('card-container')
+
+    const cardLink = document.createElement("a");
+    cardLink.classList.add('card');
+    cardLink.href = CardJSON[key].url;
+    cardLink.target = '_blank';
+
+    const cardImg = document.createElement("img")
+    cardImg.src = CardJSON[key].image_url;
+    cardImg.alt = `Zymo's ${CardJSON[key].title} illustration`;
+
+    const cardInfo = document.createElement('div');
+
+    const cardTitle = document.createElement("h3");
+    cardTitle.textContent = CardJSON[key].title;
+
+    const cardPara = document.createElement("p");
+    cardPara.textContent = CardJSON[key].description;
+
+    const cardCta = document.createElement("a");
+    cardCta.classList.add('card-cta');
+    cardCta.href = CardJSON[key].url;
+    cardCta.target = '_blank';
+    cardCta.textContent = 'Learn more';
+
+    cardInfo.appendChild(cardTitle);
+    cardInfo.appendChild(cardPara);
+    cardLink.appendChild(cardImg);
+    cardLink.appendChild(cardInfo);
+    cardContainer.appendChild(cardLink);
+    cardContainer.appendChild(cardCta);
+
+    cardsSection.appendChild(cardContainer);
+
   });
-  document.getElementById("Cards").innerHTML = newCards;
 }
 
 function handleContactFormSubmit(event){
@@ -43,14 +63,20 @@ function handleContactFormSubmit(event){
     }
   }
   )
+  // remove any old success message before adding new one
+  const OldSucMes = document.getElementById('Contact-suc-mes');
+  if(OldSucMes){
+    OldSucMes.remove();
+  }
   const formSubmittedMes = document.createElement('span');
   formSubmittedMes.textContent = 'Your form has been successfully submitted!';
   formSubmittedMes.classList.add('success-message');
-  const contactForm = document.getElementById('Contact-form');
+  formSubmittedMes.id = 'Contact-suc-mes';
 
+  const contactForm = document.getElementById('Contact-form');
   contactForm.insertBefore(formSubmittedMes, contactForm.firstChild);
-  formSubmittedMes.scrollIntoView({
-    behavior: "smooth",
+  const contactSection = document.getElementById('Contact');
+  contactSection.scrollIntoView({
     block: "start"
   })
 
