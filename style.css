@@ -3,6 +3,12 @@
   --light-gray: #f8f8f8;
   --gray: #f1f1f1;
   --blue-gray: #ccd0d9;
+  --light-blue: #63b4cf;
+}
+*:focus{
+    outline: 0.25rem solid var(--light-blue);
+    margin: 0.25rem;
+    transition: outline 200ms ease-in;
 }
 body {
   width: 100%;

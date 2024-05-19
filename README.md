@@ -26,4 +26,4 @@ To set up and run this project locally, follow these steps:
 ## Features
 _Comming soon..._ 
 ## Demo 
- Click [here](https://pickordian.github.io/zymo-landing-page) to see the website demo
+ Click <a href="https://pickordian.github.io/zymo-landing-page" target="_blank">here</a> to see the website demo

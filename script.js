@@ -1,4 +1,4 @@
-import CardJSON from "/cards.js";
+import CardJSON from "./cards.js";
 
 function handleHeroInqClick() {
   document.getElementById("Contact").scrollIntoView({
