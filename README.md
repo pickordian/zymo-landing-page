@@ -23,7 +23,7 @@ To set up and run this project locally, follow these steps:
     ```sh
     open index.html
     ```
-##Features
+## Features
 _Comming soon..._ 
-##Demo 
- Click [here](pickordian.github.io/zymo-landing-page) to see the website demo
+## Demo 
+ Click [here](https://pickordian.github.io/zymo-landing-page) to see the website demo
