@@ -7,6 +7,7 @@
 body {
   width: 100%;
   margin: 0;
+  font-family: "Noto Sans", sans-serif;
 }
 
 section {
@@ -72,7 +73,7 @@ button {
   gap: 0.5rem;
 }
 .hero-feature > img {
-  width: 8rem;
+  width: 10rem;
   height: auto;
 }
 
@@ -102,6 +103,7 @@ button {
   position: relative;
 }
 .card {
+  height: 100%;
   display: block;
   background-color: #ffffff;
   cursor: pointer;
@@ -119,6 +121,7 @@ not sure if they can be reused outside of this card */
 .card h3 {
   margin: 0;
   font-size: 1.25rem;
+  font-weight: 500;
   color: var(--cta-color);
 }
 .card p {
@@ -166,7 +169,11 @@ textarea {
   border: 1px solid var(--blue-gray);
   border-radius: 0.5rem;
 }
-
+#Contact .success-message {
+  width: 100%;
+  font-weight: 600;
+  color: var(--cta-color);
+}
 @media (width <= 40rem) {
   .banner {
     background-image: url("assets/banner-mobile.jpg");

@@ -24,3 +24,4 @@ const cardJSON = {
     "url": "https://www.zymoresearch.com/pages/rna-learning-center"
   }
 }
+export default cardJSON;
