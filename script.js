@@ -68,6 +68,9 @@ function insertCards() {
   });
 }
 
+function handleUserScroll(){
+  
+}
 function handleContactFormSubmit(event){
   event.preventDefault();
   const formInputs = event.target.querySelectorAll('input');
@@ -102,3 +105,5 @@ heroInqBtn.addEventListener("click", handleHeroInqClick);
 window.onload = insertCards;
 const contactForm = document.getElementById("Contact-form");
 contactForm.addEventListener('submit', handleContactFormSubmit);
+
+document.addEventListener('DOMContentLoaded', handleUserScroll);
