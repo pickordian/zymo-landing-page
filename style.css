@@ -38,6 +38,7 @@ a {
 button {
   cursor: pointer;
 }
+
 .cta-btn {
   position: relative;
   padding: 0.75rem 2rem;
@@ -54,10 +55,10 @@ button {
   border: 0.1rem solid transparent;
   color: var(--cta-color);
 }
+
 .cta-btn.btn-eff::before {
   background-color: #ffffff;
 }
-
 .btn-eff::before {
   content: " ";
   width: 150%;
@@ -76,12 +77,12 @@ button {
   transform: translate(0%);
   z-index: -2;
 }
+
 .banner {
   height: 35svh;
   background-image: url("assets/banner-desktop.jpg");
   /*Backrgound-size: cover causes 
-  the banner to clip some part of the bg image. Really depend on 
-  one's preference, and I prefer this way  */
+  the banner to clip some part of the bg image */
   background-size: 100% 100%;
 }
 
@@ -138,7 +139,7 @@ button {
   gap: 2rem;
 }
 .card-container {
-  width: min(15rem, 100%);
+  width: min(18rem, 100%);
   position: relative;
 }
 .card {
@@ -181,7 +182,6 @@ button {
   line-height: 1.25rem;
   color: #000000;
 }
-
 /* Use opacity 99.99 to create new stacking context,
  use z-index = -2 to place ::before behind card-cta content*/
 .card-cta {
@@ -195,8 +195,8 @@ button {
   font-weight: 600;
   color: #000000;
   transition: all 100ms ease-in;
-  overflow: hidden;
   opacity: 99.99%;
+  overflow: hidden;
 }
 .card-cta:hover,
 .card-cta:focus {
@@ -238,12 +238,20 @@ button {
   color: var(--cta-color);
   text-align: center;
 }
+
+
 @media (width <= 40rem) {
+  section {
+    padding: 2rem;
+  }
   .banner {
     background-image: url("assets/banner-mobile.jpg");
   }
 }
 @media (width > 40rem) and (width <= 60rem) {
+  section {
+    padding: 2rem;
+  }
   .banner {
     background-image: url("assets/banner-tablet.jpg");
   }

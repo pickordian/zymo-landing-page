@@ -14,7 +14,13 @@
 
   </head>
   <body>
-    <header class="banner"></header>
+    <header class="banner">
+        <picture>
+            <source srcset="./assets/banner-tablet" media="(max-with: 60rem)">
+            <source srcset="./asset/banner-mobile"  media="(max-with: 40rem)">
+            <img src="./assets/banner-desktop.jpg" alt=""/>
+        </picture>
+    </header>
     <main>
       <section id="Hero">
         <div>
@@ -23,7 +29,7 @@
         </div>
         <div class="hero-feature-container">
           <span class="hero-feature">
-            <!-- I put placeholder for the alt texts since there is not enough context -->
+            <!-- placeholder alt texts since there is not enough context -->
             <img
               alt="placeholder alt text for bullseye icon"
               src="assets/bullseye_icon.jpg"

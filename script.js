@@ -16,9 +16,7 @@ function insertCards() {
   // extract object key: eg: 'card_1, card_2' then
   // use them to access CardJSON data 
   Object.keys(CardJSON).forEach(function (key, index) {
-    
-    
-  
+
     const cardContainer = document.createElement("div");
     cardContainer.classList.add('card-container')
     // inside card container
@@ -36,7 +34,7 @@ function insertCards() {
     cardImg.src = CardJSON[key].image_url;
     cardImg.alt = `Zymo's ${CardJSON[key].title} illustration`;
     cardImg.loading ='lazy';
-       
+       // end img-container
     const card = document.createElement('div');
         // inside div
     const cardTitle = document.createElement("h3");

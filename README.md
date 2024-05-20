@@ -14,7 +14,7 @@ Before you begin, ensure you have the following:
 
 To set up and run this project locally, follow these steps:
 
-### Step 1:Clone the repository:
+### Step 1: Clone the repository:
 
 ```sh
 git clone https://github.com/pickordian/zymo-landing-page.git
@@ -22,15 +22,15 @@ git clone https://github.com/pickordian/zymo-landing-page.git
 
 ### Step 2: Navigate to project repository:
 
-    ```sh
-    cd zymo-landing-page
-    ```
+```sh
+cd zymo-landing-page
+```
 
 ### Step 3: On the same terminal, run this project on a local server:
 
-    You do the this step by using either:
+    You can do the this step either by:
 
-#### Visual Studio Code Live Server Extension:
+#### Using Visual Studio Code Live Server Extension:
 1. Open this project on Visual Studio Code:
     ```sh
     code . 
@@ -39,7 +39,7 @@ git clone https://github.com/pickordian/zymo-landing-page.git
 3. Select 'Open with Live Server'
 4. Open a browser and go to 'http://localhost:5500'
 
-#### Node.js http-server package
+#### Using Node.js http-server package
 1. Install the 'http-server' package:
     ```sh
     npm install -g http-server
