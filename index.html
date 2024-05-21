@@ -15,11 +15,24 @@
   <body>
     <header class="banner">
       <picture>
-        <source srcset="./assets/banner-tablet" media="(max-with: 60rem)" />
-        <source srcset="./asset/banner-mobile" media="(max-with: 40rem)" />
-        <img src="./assets/banner-desktop.jpg" alt="Banner showing two
-        scientists working, and the NovaSeq 6000 DNA
-        sequencing machine."/>
+        <picture>
+          <source
+            srcset="./assets/banner-desktop.jpg"
+            media="(min-width: 60rem)"
+          />
+          <source
+            srcset="./assets/banner-tablet.jpg"
+            media="(min-width: 40rem)"
+          />
+          <source
+            srcset="./assets/banner-mobile.jpg"
+            media="(max-width: 40rem)"
+          />
+          <img
+            src="./assets/banner-desktop.jpg"
+            alt="Banner showing two scientists working, and the NovaSeq 6000 DNA sequencing machine."
+          />
+        </picture>
       </picture>
     </header>
     <main>
